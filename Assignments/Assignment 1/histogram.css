@@ -1,0 +1,19 @@
+.row {
+  display: flex;
+}
+
+.column {
+  flex: 50%;
+}
+
+.header {
+  font-family: Arial;
+  font-size: 2em;
+  font-weight: 500;
+}
+
+.redText {
+  color: #cb2c39;
+  font-family: "Trebuchet MS";
+  font-weight: 600;
+}
