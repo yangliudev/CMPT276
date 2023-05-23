@@ -6,65 +6,38 @@
     <title>Histogram Generator</title>
     <link rel="stylesheet" href="histogram.css" />
   </head>
-  <body style="background-color: #e9eff1">
+  <body>
     <p class="header">Histogram Generator</p>
 
-    <table>
-      <tr>
-        <td>
-          <div>
-            <table>
-              <tr>
-                <td class="redText">Lower bounds</td>
-                <td class="redText">Histogram</td>
-              </tr>
-              <tr>
-                <td>
-                  <table>
-                    <tr>
-                      <td>Max</td>
-                      <td><input value="100.00" /></td>
-                    </tr>
-                    <tr>
-                      <td>A+</td>
-                      <td><input value="95.00" /></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>2</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>2</td>
-                    </tr>
-                  </table>
-                </td>
-                <td>
-                  <table>
-                    <tr>
-                      <td>Max</td>
-                      <td><input value="100.00" /></td>
-                    </tr>
-                    <tr>
-                      <td>A+</td>
-                      <td><input value="95.00" /></td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>2</td>
-                    </tr>
-                    <tr>
-                      <td>1</td>
-                      <td>2</td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-            </table>
-          </div>
-        </td>
-      </tr>
-    </table>
+    <div class="container">
+      <div class="rectangle">
+        <p class="redText">Lower bounds</p>
+        <table>
+          <tr>
+            <td>Max</td>
+            <td><input value="100.00" /></td>
+          </tr>
+          <tr>
+            <td>A+</td>
+            <td><input value="95.00" /></td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>2</td>
+          </tr>
+        </table>
+      </div>
+      <div>
+        <div class="square"><p class="redText">Histogram</p></div>
+        <div class="square">
+          <p>New Grade:</p>
+        </div>
+      </div>
+    </div>
 
     <script src="calculate.js"></script>
   </body>
