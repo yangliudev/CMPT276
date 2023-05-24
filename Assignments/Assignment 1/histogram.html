@@ -10,7 +10,7 @@
     <p class="header">Histogram Generator</p>
 
     <div class="container">
-      <div class="rectangle">
+      <div class="lowerBoundsBox">
         <p class="redText">Lower bounds</p>
         <table>
           <tr>
@@ -64,15 +64,63 @@
         </table>
       </div>
       <div>
-        <div class="square"><p class="redText">Histogram</p></div>
-        <div class="square">
+        <div class="histogramBox">
+          <p class="redText">Histogram</p>
+          <table>
+            <tr>
+              <td>A+</td>
+              <td><p id="outputValueA+"></p></td>
+            </tr>
+            <tr>
+              <td>A</td>
+              <td><p id="outputValueA"></p></td>
+            </tr>
+            <tr>
+              <td>A-</td>
+              <td><p id="outputValueA-"></p></td>
+            </tr>
+            <tr>
+              <td>B+</td>
+              <td><input value="80.00" /></td>
+            </tr>
+            <tr>
+              <td>B</td>
+              <td><input value="75.00" /></td>
+            </tr>
+            <tr>
+              <td>B-</td>
+              <td><input value="70.00" /></td>
+            </tr>
+            <tr>
+              <td>C+</td>
+              <td><input value="65.00" /></td>
+            </tr>
+            <tr>
+              <td>C</td>
+              <td><input value="60.00" /></td>
+            </tr>
+            <tr>
+              <td>C-</td>
+              <td><input value="55.00" /></td>
+            </tr>
+            <tr>
+              <td>D</td>
+              <td><input value="50.00" /></td>
+            </tr>
+            <tr>
+              <td>F</td>
+              <td><input value="0.00" /></td>
+            </tr>
+          </table>
+        </div>
+        <div class="newGradeBox">
           <table>
             <tr>
               <td>New Grade:</td>
               <td><input id="newGradeInput" /></td>
             </tr>
           </table>
-          <button type="button" onClick="submitForm()">Submit</button>
+          <button type="button" onClick="submitNewGrade()">Submit</button>
         </div>
       </div>
     </div>

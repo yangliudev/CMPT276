@@ -14,16 +14,25 @@
   display: flex;
 }
 
-.rectangle {
+.lowerBoundsBox {
   width: 100px;
-  height: 200px;
+  height: 400px;
   background-color: #e9eff1;
   margin-right: 10px;
   padding: 20px;
   border-radius: 2.5%;
 }
 
-.square {
+.histogramBox {
+  width: 100px;
+  height: 400px;
+  background-color: #e9eff1;
+  margin-bottom: 10px;
+  padding: 20px;
+  border-radius: 2.5%;
+}
+
+.newGradeBox {
   width: 100px;
   height: 100px;
   background-color: #e9eff1;
