@@ -51,16 +51,6 @@ function submitNewGrade() {
   }
 }
 
-function updateBound(bound) {
-  if (bound === "maxBound") {
-    console.log("max bound");
-  } else if (bound === "aplusBound") {
-    console.log("a plus bound");
-  } else {
-    console.log("hello world");
-  }
-}
-
 function updateHistogram(elementToUpdate) {
   let outputElement = document.getElementById(elementToUpdate);
   let existingText = outputElement.textContent;
