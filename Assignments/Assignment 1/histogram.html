@@ -15,15 +15,33 @@
         <table>
           <tr>
             <td>Max</td>
-            <td><input value="100.00" /></td>
+            <td>
+              <input
+                value="100.00"
+                id="maxBound"
+                onchange="updateBound('maxBound')"
+              />
+            </td>
           </tr>
           <tr>
             <td>A+</td>
-            <td><input value="95.00" /></td>
+            <td>
+              <input
+                value="95.00"
+                id="aplusBound"
+                onchange="updateBound('aplusBound')"
+              />
+            </td>
           </tr>
           <tr>
             <td>A</td>
-            <td><input value="90.00" /></td>
+            <td>
+              <input
+                value="90.00"
+                id="aBound"
+                onchange="updateBound('aBound')"
+              />
+            </td>
           </tr>
           <tr>
             <td>A-</td>
@@ -81,35 +99,35 @@
             </tr>
             <tr>
               <td>B+</td>
-              <td><input value="80.00" /></td>
+              <td><p id="outputValueB+"></p></td>
             </tr>
             <tr>
               <td>B</td>
-              <td><input value="75.00" /></td>
+              <td><p id="outputValueB"></p></td>
             </tr>
             <tr>
               <td>B-</td>
-              <td><input value="70.00" /></td>
+              <td><p id="outputValueB-"></p></td>
             </tr>
             <tr>
               <td>C+</td>
-              <td><input value="65.00" /></td>
+              <td><p id="outputValueC+"></p></td>
             </tr>
             <tr>
               <td>C</td>
-              <td><input value="60.00" /></td>
+              <td><p id="outputValueC"></p></td>
             </tr>
             <tr>
               <td>C-</td>
-              <td><input value="55.00" /></td>
+              <td><p id="outputValueC-"></p></td>
             </tr>
             <tr>
               <td>D</td>
-              <td><input value="50.00" /></td>
+              <td><p id="outputValueD"></p></td>
             </tr>
             <tr>
               <td>F</td>
-              <td><input value="0.00" /></td>
+              <td><p id="outputValueF"></p></td>
             </tr>
           </table>
         </div>
