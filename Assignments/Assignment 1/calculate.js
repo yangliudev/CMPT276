@@ -1,6 +1,14 @@
+// let grades = [
+//   65.95, 56.98, 78.62, 96.1, 90.3, 72.24, 92.34, 60.0, 81.43, 86.22, 88.33,
+//   9.03, 49.93, 52.34, 53.11, 50.1, 88.88, 55.32, 55.69, 61.68, 70.44, 70.54,
+//   90.0, 71.11, 80.01,
+// ];
+
+let grades = [];
+
 function submitNewGrade() {
   // Uncomment to run provided test data
-  // populateWithSampleData();
+  // populate();
   // return;
 
   // Get necessary html elements using ID
@@ -33,13 +41,14 @@ function submitNewGrade() {
     return;
   }
 
+  userInput = parseInt(userInput);
+  grades.push(userInput);
+
   // Make sure userInput is less than the Max Bound number
   if (userInput > maxBound) {
     alert("Please enter a number less than the Max Bound!");
     return;
   }
-
-  userInput = parseInt(userInput);
 
   // Calculate where to place the new grade on histogram
   if (userInput <= maxBound && userInput >= aplusBound) {
@@ -74,13 +83,21 @@ function updateHistogram(elementToUpdate) {
   outputElement.textContent = newText;
 }
 
-function populateWithSampleData() {
-  let grades = [
-    65.95, 56.98, 78.62, 96.1, 90.3, 72.24, 92.34, 60.0, 81.43, 86.22, 88.33,
-    9.03, 49.93, 52.34, 53.11, 50.1, 88.88, 55.32, 55.69, 61.68, 70.44, 70.54,
-    90.0, 71.11, 80.01,
-  ];
+function clearHistogram() {
+  document.getElementById("outputValueA+").textContent = "";
+  document.getElementById("outputValueA").textContent = "";
+  document.getElementById("outputValueA-").textContent = "";
+  document.getElementById("outputValueB+").textContent = "";
+  document.getElementById("outputValueB").textContent = "";
+  document.getElementById("outputValueB-").textContent = "";
+  document.getElementById("outputValueC+").textContent = "";
+  document.getElementById("outputValueC").textContent = "";
+  document.getElementById("outputValueC-").textContent = "";
+  document.getElementById("outputValueD").textContent = "";
+  document.getElementById("outputValueF").textContent = "";
+}
 
+function populate() {
   let maxBound = document.getElementById("maxBound").value.trim();
   let aplusBound = document.getElementById("aplusBound").value.trim();
   let aBound = document.getElementById("aBound").value.trim();
@@ -121,4 +138,10 @@ function populateWithSampleData() {
       updateHistogram("outputValueF");
     }
   }
+}
+
+function updateBound() {
+  console.log("updateBound() called");
+  clearHistogram();
+  populate();
 }
