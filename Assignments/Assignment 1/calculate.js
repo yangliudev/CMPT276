@@ -19,12 +19,24 @@ function submitNewGrade() {
   let fBound = document.getElementById("fBound").value.trim();
 
   // Check for invalid inputs
+
+  // Check for empty string
   if (userInput === "") {
     alert("Please enter a value.");
+    return;
   }
 
+  // Make sure the userInput is a valid number that is not negative
+  // Check for string instead of number OR a negative number
   if (isNaN(userInput) || userInput < 0) {
     alert("Please enter a valid number greater than 0.");
+    return;
+  }
+
+  // Make sure userInput is less than the Max Bound number
+  if (userInput > maxBound) {
+    alert("Please enter a number less than the Max Bound!");
+    return;
   }
 
   userInput = parseInt(userInput);
