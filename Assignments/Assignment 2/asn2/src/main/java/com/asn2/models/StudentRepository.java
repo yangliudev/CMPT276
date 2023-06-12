@@ -1,7 +1,9 @@
-// package com.asn2.models;
+package com.asn2.models;
 
-// import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.List;
 
-// public interface StudentRepository extends JpaRepository<Student, Integer> {
-//     List<Student>
-// }
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface StudentRepository extends JpaRepository<Student, Integer> {
+    List<Student> findByName(String name);
+}

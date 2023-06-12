@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Yang SQL CRUD App</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <style>
+      /* Some basic styling for the table */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 8px;
+        text-align: left;
+        border-bottom: 1px solid #ddd;
+      }
+      th {
+        background-color: #f2f2f2;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Yang's Student Table</h1>
+
+    <!-- Create Form -->
+    <!-- <h2>Create</h2>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" /><br /><br />
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" /><br /><br />
+      <button type="submit">Create</button>
+    </form> -->
+
+    <!-- Read Table -->
+    <h2>Read</h2>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Weight</th>
+        <th>Height</th>
+        <th>Hair Color</th>
+        <th>GPA</th>
+        <th>Action</th>
+      </tr>
+      <tr>
+        <td>John Doe</td>
+        <td>150 lbs</td>
+        <td>5'10"</td>
+        <td>Brown</td>
+        <td>3.5</td>
+        <td>
+          <button>Edit</button>
+          <button>Delete</button>
+        </td>
+      </tr>
+      <!-- Additional rows go here -->
+    </table>
+
+    <h1>USERS</h1>
+    hello users!!!
+    <ul>
+      <li th:each="user:${users}">
+        <span th:text="${user.name}"></span>
+      </li>
+    </ul>
+
+    <!-- Update Form -->
+    <!-- <h2>Update</h2>
+    <form>
+      <label for="edit-name">Name:</label>
+      <input type="text" id="edit-name" name="edit-name" /><br /><br />
+      <label for="edit-email">Email:</label>
+      <input type="email" id="edit-email" name="edit-email" /><br /><br />
+      <button type="submit">Update</button>
+      <button type="button">Cancel</button>
+    </form> -->
+
+    <!-- Delete Confirmation -->
+    <!-- <h2>Delete</h2>
+    <p>Are you sure you want to delete this record?</p>
+    <button>Delete</button>
+    <button type="button">Cancel</button> -->
+  </body>
+</html>

@@ -11,15 +11,17 @@ public class Student {
     private String name;
     private int weight;
     private int height;
-    private String hair_color;
+    private String hairColor;
     private int gpa;
 
-    public Student(int uid, String name, int weight, int height, String hair_color, int gpa) {
-        this.uid = uid;
+    public Student() {
+    }
+
+    public Student(String name, int weight, int height, String hairColor, int gpa) {
         this.name = name;
         this.weight = weight;
         this.height = height;
-        this.hair_color = hair_color;
+        this.hairColor = hairColor;
         this.gpa = gpa;
     }
     
@@ -41,7 +43,7 @@ public class Student {
     }
     
     public String getHairColor() {
-        return hair_color;
+        return hairColor;
     }
     
     public int getGpa() {
@@ -65,8 +67,8 @@ public class Student {
         this.height = height;
     }
     
-    public void setHairColor(String hair_color) {
-        this.hair_color = hair_color;
+    public void setHairColor(String hairColor) {
+        this.hairColor = hairColor;
     }
     
     public void setGpa(int gpa) {
