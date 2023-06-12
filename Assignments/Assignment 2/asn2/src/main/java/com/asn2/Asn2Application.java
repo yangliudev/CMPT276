@@ -1,4 +1,4 @@
-package com.asn2.asn2;
+package com.asn2;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
