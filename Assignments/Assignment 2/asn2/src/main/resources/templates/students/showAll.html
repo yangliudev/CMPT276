@@ -50,12 +50,12 @@
         <th>GPA</th>
         <th>Action</th>
       </tr>
-      <tr>
-        <td>John Doe</td>
-        <td>150 lbs</td>
-        <td>5'10"</td>
-        <td>Brown</td>
-        <td>3.5</td>
+      <tr th:each="student:${students}">
+        <td th:text="${student.name}"></td>
+        <td th:text="${student.weight}"></td>
+        <td th:text="${student.height}"></td>
+        <td th:text="${student.hairColor}"></td>
+        <td th:text="${student.gpa}"></td>
         <td>
           <button>Edit</button>
           <button>Delete</button>
@@ -63,14 +63,6 @@
       </tr>
       <!-- Additional rows go here -->
     </table>
-
-    <h1>USERS</h1>
-    hello users!!!
-    <ul>
-      <li th:each="user:${users}">
-        <span th:text="${user.name}"></span>
-      </li>
-    </ul>
 
     <!-- Update Form -->
     <!-- <h2>Update</h2>
