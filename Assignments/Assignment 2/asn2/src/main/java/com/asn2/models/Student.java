@@ -9,15 +9,15 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int uid;
     private String name;
-    private int weight;
-    private int height;
+    private float weight;
+    private float height;
     private String hairColor;
-    private int gpa;
+    private float gpa;
 
     public Student() {
     }
 
-    public Student(String name, int weight, int height, String hairColor, int gpa) {
+    public Student(String name, float weight, float height, String hairColor, float gpa) {
         this.name = name;
         this.weight = weight;
         this.height = height;
@@ -34,11 +34,11 @@ public class Student {
         return name;
     }
     
-    public int getWeight() {
+    public float getWeight() {
         return weight;
     }
     
-    public int getHeight() {
+    public float getHeight() {
         return height;
     }
     
@@ -46,7 +46,7 @@ public class Student {
         return hairColor;
     }
     
-    public int getGpa() {
+    public float getGpa() {
         return gpa;
     }
     
@@ -59,11 +59,11 @@ public class Student {
         this.name = name;
     }
     
-    public void setWeight(int weight) {
+    public void setWeight(float weight) {
         this.weight = weight;
     }
     
-    public void setHeight(int height) {
+    public void setHeight(float height) {
         this.height = height;
     }
     
@@ -71,7 +71,7 @@ public class Student {
         this.hairColor = hairColor;
     }
     
-    public void setGpa(int gpa) {
+    public void setGpa(float gpa) {
         this.gpa = gpa;
     }
     

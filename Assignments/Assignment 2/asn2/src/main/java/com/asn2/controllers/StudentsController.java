@@ -39,10 +39,10 @@ public class StudentsController {
     @PostMapping("/students/add")
     public String addStudent(@RequestParam Map<String, String> newStudent, HttpServletResponse response) {
         String newName = newStudent.get("name");
-        int newWeight = Integer.parseInt(newStudent.get("weight"));
-        int newHeight = Integer.parseInt(newStudent.get("height"));
+        float newWeight = Float.parseFloat(newStudent.get("weight"));
+        float newHeight = Float.parseFloat(newStudent.get("height"));
         String newHairColor = newStudent.get("hairColor");
-        int newGpa = Integer.parseInt(newStudent.get("gpa"));
+        float newGpa = Float.parseFloat(newStudent.get("gpa"));
         
         Student student = new Student(newName, newWeight, newHeight, newHairColor, newGpa);
         studentRepo.save(student);
