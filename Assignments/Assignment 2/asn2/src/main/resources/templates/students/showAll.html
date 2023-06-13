@@ -11,7 +11,7 @@
 
     <style>
       table {
-        width: 100%;
+        width: 80%;
         border-collapse: collapse;
       }
       th,
@@ -22,6 +22,17 @@
       }
       th {
         background-color: #f2f2f2;
+      }
+      .student-rectangle {
+        width: 100px;
+        height: 100px;
+        background-color: lightblue;
+        margin: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-weight: bold;
       }
     </style>
     <script>
@@ -46,7 +57,7 @@
     </script>
   </head>
 
-  <body>
+  <body class="container-fluid">
     <h1>Yang's Student Table</h1>
 
     <table>
@@ -76,5 +87,22 @@
       </tr>
     </table>
     <a href="/redirectToAdd">Add Student</a>
+
+    <div style="display: flex; flex-wrap: wrap">
+      <div
+        class="student-rectangle"
+        th:each="student : ${students}"
+        th:style="'width:' + ${student.weight} + 'px; height:' + ${student.height} + 'px;'"
+      >
+        <div>
+          <span
+            th:text="${student.name}"
+            th:style="'color:' + ${student.hairColor}"
+          ></span>
+          <br />
+          <span th:text="${student.gpa}"></span>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
