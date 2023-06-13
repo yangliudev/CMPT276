@@ -12,33 +12,28 @@
 		<div class="row justify-content-center">
 			<div class="col-md-4">
 				<h1 class="text-center mt-5 mb-4">New User</h1>
-				<form action="/students/update/{uid}" method="post">
+				<form th:action="@{/students/update/__${student.uid}__}" method="post">
 					<div class="mb-3">
-						
 						<input type="text" id="name" name="name" class="form-control form-control-lg" 
                             placeholder="Name" th:value="${student.name}">
 					</div>
 
 					<div class="mb-3">
-						
 						<input type="text" id="weight" name="weight" class="form-control form-control-lg" 
                             placeholder="Weight" th:value="${student.weight}">
 					</div>
 
 					<div class="mb-3">
-						
 						<input type="text" id="height" name="height" class="form-control form-control-lg" 
                             placeholder="Height" th:value="${student.height}">
 					</div>
 
 					<div class="mb-3">
-						
 						<input type="text" id="hairColor" name="hairColor" class="form-control form-control-lg" 
                             placeholder="Hair Color" th:value="${student.hairColor}">
 					</div>
 
                     <div class="mb-3">
-						
 						<input type="text" id="gpa" name="gpa" class="form-control form-control-lg" 
                             placeholder="GPA" th:value="${student.gpa}">
 					</div>

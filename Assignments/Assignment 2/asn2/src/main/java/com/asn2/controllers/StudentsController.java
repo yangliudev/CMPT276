@@ -69,6 +69,7 @@ public class StudentsController {
 
         Student student = optionalStudent.get();
         model.addAttribute("student", student);
+        model.addAttribute("uid", uid);
         return "/students/edit";
     }
 
@@ -89,7 +90,7 @@ public class StudentsController {
 
             studentRepo.save(student);
             response.setStatus(HttpServletResponse.SC_OK);
-            return "/";
+            return "redirect:/";
     }
 
 }
