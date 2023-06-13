@@ -24,11 +24,16 @@ public class StudentsController {
     @Autowired
     private StudentRepository studentRepo;
 
-    @GetMapping("/students/view")
+    @GetMapping("/")
     public String getAllStudents(Model model){
         List<Student> students = studentRepo.findAll();
         model.addAttribute("students", students);
         return "students/showAll";
+    }
+
+    @GetMapping("/redirectToAdd")
+    public String redirectToAddPage() {
+        return "redirect:/add.html";
     }
 
     @PostMapping("/students/add")

@@ -32,6 +32,7 @@
           .then((response) => {
             if (response.ok) {
               console.log(`Student with ID ${uid} deleted successfully.`);
+              location.reload();
             } else if (response.status === 404) {
               console.log(`Student with ID ${uid} not found.`);
             } else {
@@ -74,5 +75,6 @@
         </td>
       </tr>
     </table>
+    <a href="/redirectToAdd">Add Student</a>
   </body>
 </html>
