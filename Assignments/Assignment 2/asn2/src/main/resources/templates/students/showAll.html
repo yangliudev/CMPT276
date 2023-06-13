@@ -65,7 +65,7 @@
         <td th:text="${student.hairColor}"></td>
         <td th:text="${student.gpa}"></td>
         <td>
-          <button>Edit</button>
+          <a th:href="@{/students/edit/{uid}(uid=${student.uid})}">Edit</a>
           <button
             type="button"
             th:onclick="'deleteStudent(' + ${student.uid} + ')'"

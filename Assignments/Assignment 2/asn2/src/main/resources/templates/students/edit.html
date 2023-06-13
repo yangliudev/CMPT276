@@ -12,40 +12,40 @@
 		<div class="row justify-content-center">
 			<div class="col-md-4">
 				<h1 class="text-center mt-5 mb-4">New User</h1>
-				<form action="/students/add" method="post">
+				<form action="/students/update/{uid}" method="post">
 					<div class="mb-3">
 						
 						<input type="text" id="name" name="name" class="form-control form-control-lg" 
-                            placeholder="Name">
+                            placeholder="Name" th:value="${student.name}">
 					</div>
 
 					<div class="mb-3">
 						
 						<input type="text" id="weight" name="weight" class="form-control form-control-lg" 
-                            placeholder="Weight">
+                            placeholder="Weight" th:value="${student.weight}">
 					</div>
 
 					<div class="mb-3">
 						
 						<input type="text" id="height" name="height" class="form-control form-control-lg" 
-                            placeholder="Height">
+                            placeholder="Height" th:value="${student.height}">
 					</div>
 
 					<div class="mb-3">
 						
 						<input type="text" id="hairColor" name="hairColor" class="form-control form-control-lg" 
-                            placeholder="Hair Color">
+                            placeholder="Hair Color" th:value="${student.hairColor}">
 					</div>
 
                     <div class="mb-3">
 						
 						<input type="text" id="gpa" name="gpa" class="form-control form-control-lg" 
-                            placeholder="GPA">
+                            placeholder="GPA" th:value="${student.gpa}">
 					</div>
 					<!-- Submit button -->
                     
                     <div class="d-grid gap-2">
-                        <input class="btn btn-primary" type="submit" value="SEND"></input>
+                        <input class="btn btn-primary" type="submit" value="UPDATE"></input>
                     </div>
 				</form>
 			</div>

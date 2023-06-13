@@ -63,4 +63,33 @@ public class StudentsController {
         }
     }
 
+    @GetMapping("/students/edit/{uid}")
+    public String showEditForm(@PathVariable int uid, Model model) {
+        Optional<Student> optionalStudent = studentRepo.findById(uid);
+
+        Student student = optionalStudent.get();
+        model.addAttribute("student", student);
+        return "/students/edit";
+    }
+
+    @PostMapping("/students/update/{uid}")
+    public String updateStudent(
+        @PathVariable int uid,
+        @RequestParam Map<String, String> updatedStudent,
+        HttpServletResponse response
+    ) {
+            Optional<Student> optionalStudent = studentRepo.findById(uid);
+            Student student = optionalStudent.get();
+
+            student.setName(updatedStudent.get("name"));
+            student.setWeight(Float.parseFloat(updatedStudent.get("weight")));
+            student.setHeight(Float.parseFloat(updatedStudent.get("height")));
+            student.setHairColor(updatedStudent.get("hairColor"));
+            student.setGpa(Float.parseFloat(updatedStudent.get("gpa")));
+
+            studentRepo.save(student);
+            response.setStatus(HttpServletResponse.SC_OK);
+            return "/";
+    }
+
 }
