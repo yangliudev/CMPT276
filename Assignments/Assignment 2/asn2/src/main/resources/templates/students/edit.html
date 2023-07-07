@@ -109,8 +109,8 @@
           return false;
         }
 
-        if (!isNaN(hairColorInput.value)) {
-          alert("Hair color must be a string.");
+        if (!hairColorInput.value.match(/^[a-zA-Z]+$/)) {
+          alert("Hair color must contain only alphabetic characters!");
           return false;
         }
 
