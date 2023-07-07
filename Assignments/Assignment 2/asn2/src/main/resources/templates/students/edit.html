@@ -114,24 +114,18 @@
           return false;
         }
 
-        if (
-          isNaN(weightInput.value) ||
-          !Number.isInteger(parseFloat(weightInput.value))
-        ) {
+        if (isNaN(weightInput.value) || isNaN(parseFloat(weightInput.value))) {
           alert("Weight must be an integer.");
           return false;
         }
 
-        if (
-          isNaN(heightInput.value) ||
-          !Number.isInteger(parseFloat(heightInput.value))
-        ) {
+        if (isNaN(heightInput.value) || isNaN(parseFloat(heightInput.value))) {
           alert("Height must be an integer.");
           return false;
         }
 
         if (isNaN(gpaInput.value) || isNaN(parseFloat(gpaInput.value))) {
-          alert("GPA must be a number.");
+          alert("GPA must be an integer.");
           return false;
         }
 
