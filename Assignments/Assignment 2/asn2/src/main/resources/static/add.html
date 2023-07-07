@@ -125,11 +125,8 @@
           return false;
         }
 
-        if (
-          isNaN(gpaInput.value) ||
-          !Number.isInteger(parseFloat(gpaInput.value))
-        ) {
-          alert("GPA must be an integer.");
+        if (isNaN(gpaInput.value) || isNaN(parseFloat(gpaInput.value))) {
+          alert("GPA must be a number.");
           return false;
         }
 
